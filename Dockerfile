@@ -47,7 +47,7 @@ ENV PICO_SDK_PATH=/project/pico-sdk/
 # Copy project sources into image
 COPY CMakePresets.json          /project/
 COPY CMakeLists.txt             /project/
-COPY cov_report                 /project/cov_report/
+COPY gcovr                      /project/gcovr/
 COPY gcov                       /project/gcov/
 COPY doxy                       /project/doxy/
 COPY McuLib                     /project/McuLib/
