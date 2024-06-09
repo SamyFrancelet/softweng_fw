@@ -45,7 +45,6 @@
 #define PL_CONFIG_USE_UART              (0) /* if using UART for stdio */
 #define PL_CONFIG_USE_USB_CDC           (1) /* if using USB CDC for standard I/O */
 #define PL_CONFIG_USE_SEMIHOSTING       (0) /* if using semihosting for standard I/O */
-// #define PL_CONFIG_USE_SEMIHOSTING       (1) /* if using semihosting for standard I/O */
 #define PL_CONFIG_USE_RS485             (0 && McuUart485_CONFIG_USE_RS_485)
 #define PL_CONFIG_USE_RS485_SHELL       (1 && PL_CONFIG_USE_RS485)
 
@@ -71,7 +70,7 @@
    #error "needs to be defined in IncludeMcuLibconfig.h!"
 #endif
 
-#define PL_CONFIG_USE_GCOV              (1 && McuRdimon_CONFIG_IS_ENABLED) /* if using gcov */
+#define PL_CONFIG_USE_GCOV              (0 && McuRdimon_CONFIG_IS_ENABLED) /* if using gcov */
 #define PL_CONFIG_USE_GPROF             (0)
 
 /*! \brief Module and platform initialization */

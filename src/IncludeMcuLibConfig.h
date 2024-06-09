@@ -152,12 +152,12 @@
 #endif
 /* ---------------------------------------------------------------------------------------*/
 /* McuSemihost */
-#define McuSemihost_CONFIG_IS_ENABLED               (1)
+#define McuSemihost_CONFIG_IS_ENABLED               (0)
 #define McuSemihost_CONFIG_DEBUG_CONNECTION         McuSemihost_DEBUG_CONNECTION_SEGGER
 #define McuSemihost_CONFIG_LOG_ENABLED              (0)
 /* ---------------------------------------------------------------------------------------*/
 /* McuRdimon */
-#define McuRdimon_CONFIG_IS_ENABLED                 (1)       /* 1: RdiMon is enabled; 0: RdiMon is disabled*/
+#define McuRdimon_CONFIG_IS_ENABLED                 (0)       /* 1: RdiMon is enabled; 0: RdiMon is disabled*/
 /* ---------------------------------------------------------------------------------------*/
 
 #endif /* MCULIB_CONFIG_CONFIG_H_ */
