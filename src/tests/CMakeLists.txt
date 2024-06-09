@@ -34,7 +34,8 @@ target_include_directories(
 )
 #################################################################################
 
-set (JRUN_CTEST_COMMAND "$ENV{SEGGER_PATH}/JRun" --silent --device RP2040_M0_0 --rtt -if SWD)
+set (JRUN_CTEST_COMMAND "JRun" --verbose --device RP2040_M0_0 --rtt -if SWD --ip "tunnel:801036857")
+#set (JRUN_CTEST_COMMAND "JRun" --verbose --device RP2040_M0_0 --rtt -if SWD --usb "801036857")
 
 set (passRegex "\\*\\* PASSED \\*\\*\\*")
 set (failRegex "\\*\\*\\* FAILED \\*\\*\\*")
@@ -56,6 +57,6 @@ add_test(
   COMMAND ${JRUN_CTEST_COMMAND} --jlinkscriptfile "${CMAKE_CURRENT_SOURCE_DIR}/test_3.JLinkScript" ${TEST_EXECUTABLE}
 )
 
-set_tests_properties(Led Sensor dnsResolver PROPERTIES TIMEOUT 15) 
+set_tests_properties(Led Sensor dnsResolver PROPERTIES TIMEOUT 120) 
 set_tests_properties(Led Sensor dnsResolver PROPERTIES PASS_REGULAR_EXPRESSION "${passRegex}") 
 set_tests_properties(Led Sensor dnsResolver PROPERTIES FAIL_REGULAR_EXPRESSION "${failRegex}") 

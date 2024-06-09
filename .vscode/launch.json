@@ -6,7 +6,7 @@
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "jlink",
-            "serverpath": "${env:SEGGER_PATH}/JLinkGDBServerCLExe",
+            "serverpath": "${env:SEGGER_PATH}/JLinkGDBServerCL.exe",
             "cwd": "${workspaceFolder}",
             "executable": "${command:cmake.launchTargetPath}",
             "armToolchainPath": "${env:PICO_TOOLCHAIN_PATH}",  // needed for the gdb
@@ -40,7 +40,7 @@
             "MIMode": "gdb",
             "miDebuggerPath": "${env:PICO_TOOLCHAIN_PATH}/arm-none-eabi-gdb",
             "miDebuggerServerAddress": "localhost:3333",
-            "debugServerPath": "\"${env:PICO_SEGGER_PATH}/JLinkGDBServerCLExe\"",
+            "debugServerPath": "\"${env:PICO_SEGGER_PATH}/JLinkGDBServerCL.exe\"",
             "debugServerArgs": "-if swd -speed 4000 -endian little -port 3333 -device RP2040_M0_0 -x \"${workspaceFolder}/.vscode/reset.gdb\"",
             "serverStarted": "Connected to target",
             "filterStdout": true,

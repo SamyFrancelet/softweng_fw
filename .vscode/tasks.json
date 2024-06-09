@@ -19,7 +19,7 @@
         {
             "label": "Flash",
             "type": "shell",
-            "command": "${env:PICO_SEGGER_PATH}\\JLink.exe",
+            "command": "${env:SEGGER_PATH}/JLink.exe",
             "args": [
                 "-if", "swd", 
                 "-speed", "4000", 

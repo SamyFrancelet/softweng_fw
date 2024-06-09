@@ -22,11 +22,13 @@ RUN apt-get install -y udev
 RUN \
     mkdir -p /project \
     && cd /project \
-    && curl -d "accept_license_agreement=accepted&submit=Download+software" -X POST -O "https://www.segger.com/downloads/jlink/JLink_Linux_x86_64.deb" 
+    && curl -d "accept_license_agreement=accepted&submit=Download+software" -X POST -O "https://www.segger.com/downloads/jlink/JLink_Linux_V794b_x86_64.deb" 
+    #&& curl -d "accept_license_agreement=accepted&submit=Download+software" -X POST -O "https://www.segger.com/downloads/jlink/JLink_Linux_x86_64.deb" 
 # issue with udev, see https://forum.segger.com/index.php/Thread/8953-SOLVED-J-Link-Linux-installer-fails-for-Docker-containers-Error-Failed-to-update/
 RUN \
     cd /project \
-    && dpkg --unpack JLink_Linux_x86_64.deb \
+    && dpkg --unpack JLink_Linux_V794b_x86_64.deb \
+    #&& dpkg --unpack JLink_Linux_x86_64.deb \
     && rm -f /var/lib/dpkg/info/jlink.postinst \
     && dpkg --configure jlink \
     && apt install -yf

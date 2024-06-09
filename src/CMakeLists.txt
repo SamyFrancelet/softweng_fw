@@ -70,3 +70,5 @@ target_include_directories(
   PRIVATE 
   .
 )
+
+add_compile_options(--coverage)

@@ -53,8 +53,8 @@ typedef enum WiFi_PasswordMethod_e {
 
 /* default values for network */
 #define WIFI_DEFAULT_HOSTNAME   "pico"
-#define WIFI_DEFAULT_SSID       "DROP TABLE *"
-#define WIFI_DEFAULT_PASS       "microROS"
+#define WIFI_DEFAULT_SSID       "pico_wifi"
+#define WIFI_DEFAULT_PASS       "PicoWifi$1"
 
 static struct wifi {
   bool isInitialized;
